@@ -414,7 +414,11 @@
   border-radius: 32px;
   transform: scale(1);
   transform-origin: 50% 50%;
-  transition: transform 0.25s ease-out;
+  transition: transform 1.5s ease-out;
+  -webkit-transition: transform 1.5s ease-out;
+  -moz-transition: transform 1.5s ease-out;
+  -ms-transition: transform 1.5s ease-out;
+  -o-transition: transform 1.5s ease-out;
 }
 .feature:hover::before {
   transform: scale(100);
@@ -1367,7 +1371,7 @@ input[type=number] {
   top: 0;
   left: 0;
   background-color: rgba(252, 252, 252, 0.5);
-  z-index: 2;
+  z-index: 100;
 }
 
 .pointechs-navbar > div {
@@ -2566,13 +2570,11 @@ input[type=number] {
 .embedded-youtube-iframe-c {
   width: 100%;
   overflow: hidden;
-  /*
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  */
   position: relative;
   overflow: hidden;
   width: 100%;

@@ -912,7 +912,6 @@ input[type=number] {
   font-size: 12px;
   font-weight: normal;
   color: rgba(94, 94, 94, 0.5019607843);
-  text-decoration: none;
   text-align: center;
   width: 100%;
 }
@@ -920,8 +919,9 @@ input[type=number] {
   color: rgba(94, 94, 94, 0.5019607843);
 }
 
-.register-now-link > span {
+.register-now-link > span ,.register-now-link >a {
   color: #27323C;
+  text-decoration: none;
 }
 
 .separator {
@@ -990,7 +990,7 @@ input[type=number] {
   top: 0;
   left: 0;
   background-color: rgba(252, 252, 252, 0.5);
-  z-index: 2;
+  z-index: 100;
 }
 
 .pointechs-navbar > div {

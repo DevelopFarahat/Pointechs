@@ -129,8 +129,8 @@ const changeAppTitleOnUserSelectNavbarLink = async(id,name)=>{
   translation = await getTranslation();
   let lang = new URL(window.location.href).searchParams.get('lang');
   let titleName;
-  if(id)
-   titleName = linksArr[id].href.substring(1);
+  if(id != undefined)
+    titleName = linksArr[Number(id)].href.substring(1);
   let title = document.getElementsByTagName("title")[0];
   let newTitle = titleName != undefined?`Pointechs | ${titleName}`:name;
   title.setAttribute("data-trans",newTitle);
@@ -156,7 +156,6 @@ document.addEventListener("DOMContentLoaded", async() => {
   let navLink
   let lang = new URL(window.location.href).searchParams.get('lang');
   const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams)
   for (const [key, value] of urlParams) {
     if (key == "section") {
        navLink = document.querySelector(`[href="#${value}"]`);
@@ -188,9 +187,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   }
   
  let categoryArr = [];
-  console.log("from DomContentLoaded")
   getCountriesDialCode().then((data)=>{
-    console.log(data)
     lang == 'en'?categoryArr = [{ id: 0, categoryName: "Restaurants" },{id:1,categoryName:"Cafes"}]:categoryArr = [{ id: 0, categoryName: "مطاعم" },{id:1,categoryName:"كافيهات"}];
     createPhoneSelectOptions(data);
     createCountryAndCategorySelectOptions(data,"name",".basic-select-countries-names");
@@ -223,6 +220,7 @@ const handleNavigationToTheRoot = (event) => {
       : nLink.classList.remove("activated-link");
   });
   onHnadleScrollToTargetSection("home");
+  changeAppTitleOnUserSelectNavbarLink(0);
 };
 let navbar = document.querySelector(".navbar");
 const handleDropShadowOnScroll = () => {
@@ -460,7 +458,6 @@ const handleContactusSubmit = (event) => {
   for (let key in contactusDataErrors) {
     if (contactusDataErrors[key] != "") return;
   }
-
   console.log(contactusData);
   resetAllContactusFormCharacteristics();
 };
@@ -747,7 +744,6 @@ const handleSignupUserData =async (event) => {
   });
 };
 const getTranslation = async()=>{
-  console.log("hi from translation")
   let translation = await translationsPromise;
   return translation;
 }
@@ -950,7 +946,6 @@ const handleAccessibilityOfAccountDetails = ()=>{
 const handleNavigationBetweenSignupSteps = (event)=>{
   for (let key of Object.keys(signupUserData).splice(0, 6)) {
     if (signupUserData[key] == "") return;
-    console.log(signupUserData[key]);
   }
   for (let key of Object.keys(signupErrors).slice(0, 6)) {
     if (signupErrors[key] != "") return;
@@ -1114,7 +1109,6 @@ const handleLoginUserData = async(event) => {
 await  handleLoginError(event.target.name, event.target.value);
   login_pass_text_type_input.value = loginUserData[login_pass_text_type_input.getAttribute("name")];
   loginEmail.value = loginUserData[loginEmail.getAttribute("name")];
-  console.log( loginErrors[loginEmailErrorsMessage.getAttribute("name")+"Error"])
   loginEmailErrorsMessage.setAttribute("data-trans",loginErrors[loginEmailErrorsMessage.getAttribute("name")+"Error"]);
   loginPasswordErrorMessage.setAttribute("data-trans",loginErrors[loginPasswordErrorMessage.getAttribute("name")+"Error"]);
   loginEmailErrorsMessage.innerHTML = loginErrors[loginEmailErrorsMessage.getAttribute("name")+"Error"];
@@ -1223,7 +1217,6 @@ const getBackToTheOriginalTitle = (useCase)=>{
 /* customization style for arabic version */
   let lang;
   export const changeApplicationStylesOnUserRequestOrChnageLang = ()=>{
-    console.log("hello dev farahat")
     lang = new URL(window.location.href).searchParams.get('lang');
     try{
       changeHomeComponentStyles(lang);
@@ -1362,6 +1355,8 @@ const changeLoginStyles = (lang)=>{
   lang == "en"?loginFormSection.style.direction = 'ltr':loginFormSection.style.direction = 'rtl';
   let loginCloseSection = document.querySelector(".login-body-modal > section + section > div:nth-child(1)");
   lang == "en"?loginCloseSection.style.justifyContent = 'flex-end':loginCloseSection.style.justifyContent = 'flex-start';
+  lang == "en"?loginEmailErrorsMessage.style.textAlign = 'left':loginEmailErrorsMessage.style.textAlign = 'right';
+  lang == 'en'?loginPasswordErrorMessage.style.textAlign = 'left':loginPasswordErrorMessage.style.textAlign = 'right';
 }
 const changeFeaturePopupStyles = (lang)=>{
   let featureReadMoreModal = document.querySelector(".feature-readmore-modal");
