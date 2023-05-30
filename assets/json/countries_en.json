@@ -1,0 +1,20 @@
+[
+    {   
+        "name": "Egypt",
+        "dialCode": "+20",
+        "isoCode": "EG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/eg.svg"
+    },
+    {
+        "name": "Saudi Arabia",
+        "dialCode": "+966",
+        "isoCode": "SA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sa.svg"
+    },
+    {
+        "name": "Bahrain",
+        "dialCode": "+973",
+        "isoCode": "BH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bh.svg"
+    }
+]

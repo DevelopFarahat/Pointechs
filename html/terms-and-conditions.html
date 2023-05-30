@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-trans="Pointechs | Terms and Conditions">Pointechs | Terms and Conditions</title>
+  <meta name="description" data-trans="metaDescription" content=metaDescription />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Mohamed Farahat " />
+  <meta name="audience" content="all" />
+   <!-- Search Engine --> 
+  <meta name="description" data-trans="metaDescription" content=metaDescription />
+  <meta property="og:url" content="https://pointechs.com" />
+  <meta name="image" content="/assets/images/android-chrome-512x512.png" />
+  <!-- Schema.org for Google --> 
+  <meta itemprop="description" data-trans="metaDescription" content="metaDescription"/>
+
+  <meta itemprop="image" content="https://pointechs.com/assets/images/android-chrome-512x512.png" />
+  <meta property="og:url" content="https://pointechs.com" />
+   <!-- Open Graph general (Facebook, Pinterest & Google+) --> 
+  <meta property="og:title"data-trans="metaTitle" content="metaTitle" />
+  <meta property="og:description" data-trans="metaDescription" content="metaDescription"/>
+  <meta property="og:image" content="/assets/images/android-chrome-512x512.png" />
+  <meta property="og:image:type" content="image/png" /> 
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pointechs | بوينتكس " />
+  <meta property="og:url" content="https://pointechs.com" />
+  <!----Twitter--> 
+  <meta name="twitter:card" content="photo" />
+  <meta name="twitter:title" data-trans="metaTitle" content="metaTitle" />
+  <meta name="twitter:description" data-trans="metaDescription" content="metaDescription"/>
+  <meta name="twitter:image:src" content="https://www.pointechs.com/assets/images/android-chrome-512x512.png"/>
+  <meta name="twitter:url" content="https://pointechs.com" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/select2.min.css" />
+  <link rel="stylesheet" href="/css/terms-and-conditions.css" />
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-xl pointechs-navbar">
+      <div class="container-fluid navbar-container">
+        <a class="navbar-brand" href="#"><img class="logo" src="/assets/images/logo.webp" alt="pointechs_logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <div class="navbar-nav nav" id="navLinksCont"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-lang">
+              <span>العربية</span>
+            </button>
+            <button type="button" id="login-btn" class="btn btn-login" data-trans="Log In" data-bs-toggle="modal"
+              data-bs-target="#signinModal">
+              Log In
+            </button>
+            <button type="button" id="signup-btn" class="btn btn-get-started" data-trans="Get Started"
+              data-bs-toggle="modal" data-bs-target="#signupModal">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--end of navbar-->
+      <!--signup modal-->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="direction: initial;">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body signup-model-body" style="direction: ltr;">
+          <!-- signup code -->
+          <section class="signup-img-container">
+            <img src="/assets/images/person.webp" loading="lazy" alt="person with laptop setting on desk" />
+          </section>
+          <section class="signup-form-container">
+            <div>
+              <span data-bs-dismiss="modal" id="sign-up-close">
+                <img src="/assets/images/close.svg" alt="close" />
+              </span>
+            </div>
+            <form class="signup-form" method="post">
+              <h1 data-trans="Sign up">Sign up</h1>
+              <section class="signup-settings-header">
+                <span id="personalInfo" data-trans="Personal Info">Personal Info</span>
+                <span id="accountDetails" data-trans="Account Details">Account Details</span>
+              </section>
+              <div class="personal-info">
+                <div>
+                  <label for="fullname" data-trans="Full Name">Full Name</label>
+                  <input type="text" name="fullname" id="fullname" />
+                  <small class="text-danger" name="fullname"></small>
+                </div>
+                <div>
+                  <label for="email" data-trans="Email Address">Email Address</label>
+                  <input type="text" name="email" id="email" />
+                  <small class="text-danger" name="email"></small>
+                </div>
+                <div id="phone-dialcode-cont">
+                  <label for="phone" class="phone" data-trans="Phone Number">Phone Number</label>
+                  <section class="phone-input-select-section" style="border-radius: 5px;">
+                    <select class="basic-select-phone-code" name="dialCode" id="dialCode">
+                    </select>
+                    <input type="number" name="phone" id="phone" />
+                  </section>
+                  <small class="text-danger" name="phone"></small>
+                </div>
+                <div class="pass-section">
+                  <label for="password" data-trans="Password">Password</label>
+                  <div tabindex="0" id="pass-section-input-eye-cont">
+                    <input type="password" name="password" id="password" />
+                    <div id="pass">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye-slash" viewBox="0 0 16 16">
+                        <path
+                          d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                        <path
+                          d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                        <path
+                          d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <small class="text-danger" name="password"></small>
+                </div>
+                <div class="pass-section">
+                  <label for="confirmPassword" data-trans="Confirm Password">Confirm Password</label>
+                  <div tabindex="0" id="con-pass-section-input-eye-cont">
+                    <input type="password" name="confirmPassword" id="confirmPassword" />
+                    <div id="con-pass">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye-slash" viewBox="0 0 16 16">
+                        <path
+                          d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                        <path
+                          d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                        <path
+                          d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <small class="text-danger" name="confirmPassword"></small>
+                </div>
+              </div>
+              <div class="account-details">
+                <div>
+                  <label for="country-select" data-trans="Choose Country">Choose Country</label>
+                  <select class="basic-select-countries-names"></select>
+                </div>
+                <div>
+                  <label for="category-select" data-trans="Choose Category">Choose Category</label>
+                  <select class="basic-categories-select-names"></select>
+                </div>
+                <div>
+                  <label for="store-name-ar" data-trans="Store Name in Arabic">Store Name in Arabic</label>
+                  <input type="text" name="storeNameAr" id="store-name-ar" />
+                  <small class="text-danger" name="storeNameAr"></small>
+                </div>
+                <div>
+                  <label id="store-name-en" data-trans="Your store name">Your store name</label>
+                  <input type="text" name="storeNameEn" id="store-name-en" />
+                  <small class="text-danger" name="storeNameEn"></small>
+                </div>
+                <div>
+                  <input class="form-check-input mt-0" type="checkbox" name="termsOfServiceStatus"
+                    id="termsOfServiceStatus" value="" aria-label="Checkbox for following text input">
+                  <label for="termsOfServiceStatus">
+                    <span data-trans="By confirming your data, you agree to">By confirming your data, you agreeto</span>
+                    <a href="/html/terms-and-conditions.html" data-trans="our terms of service">our terms of service</a>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn continue-btn" data-trans="Continue">Continue</button>
+              <span>
+                <span data-trans="Already have an account">Already have an account</span>
+                <a href="#" data-trans="Sign In" data-bs-toggle="modal" id="signinLink" data-bs-target="#signinModal">Sign In</a>
+              </span>
+            </form>
+          </section>
+          <!--end of sign up form-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of sign up modal-->
+  <!--sign in modal-->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="direction: initial;">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body  login-body-modal">
+          <!-- sign in form-->
+          <section class=login-img-section>
+            <img src="/assets/images/login.webp" loading="lazy" alt="hands types on laptop" />
+          </section>
+          <section class=login-form-container>
+            <div>
+              <span id="login-close" data-bs-dismiss="modal">
+                <img src="/assets/images/close.svg" alt="close_icon" />
+              </span>
+            </div>
+            <div>
+              <h1 data-trans="Log in">Log in</h1>
+              <form class=login-form method="post">
+                <div>
+                  <label for="email" data-trans="Email Address">Email Address</label>
+                  <input type="text" name="email" id="email-login" />
+                  <small class="text-danger errorMessage" name="email" data-trans=""></small>
+                </div>
+                <div>
+                  <label for="password" data-trans="Password">Password</label>
+                  <div>
+                    <div id="pass-login-section-cont">
+                      <input type="password" name="password" id="password-login" />
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-eye-slash" viewBox="0 0 16 16">
+                          <path
+                            d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                          <path
+                            d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                          <path
+                            d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <small class="text-danger errorMessage" id="login-password-error-message" name="password" data-trans=""></small>
+                  </div>
+                  <a class=forget-password-link href="#" data-trans="Forget Password">Forget Password</a>
+                </div>
+                <div class=separator></div>
+                <button type="submit" id="login-form-login-btn" class="btn" data-trans="Login">Login</button>
+                <span class=register-now-link>
+                  <span data-trans="Create an account">Create an account</span>
+                  <a data-trans="Register Now" href="#" data-bs-toggle="modal" id="signupLink" data-bs-target="#signupModal">Register Now</a>
+                </span>
+              </form>
+            </div>
+          </section>
+          <!--end of sign in form-->
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="app">
+      <div class='backdrop-waiting'>
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+      </div>
+    <div class="terms-main-section"></div>
+    <div>
+        <div>
+            <section>
+                <span></span>
+                <h1 data-trans="Terms and Conditions">Terms and Conditions</h1>
+            </section>
+            <section>
+                <p>
+                    Probably the most effective way to achieve paragraph unity is to
+                    express the central idea of the paragraph in a topic sentence. Topic
+                    sentences are similar to mini thesis statements. Like a thesis
+                    statement, a topic sentence has a specific main point. Whereas the
+                    thesis is the main point of the essay, the topic sentence is the
+                    main point of the paragraph. Like the thesis statement, a topic
+                    sentence has a unifying function. But a thesis statement or topic
+                    sentence alone doesn’t guarantee unity. An essay is unified if all
+                    the paragraphs relate to the thesis, whereas a paragraph is unified
+                    if all the sentences relate to the topic sentence. Note: Not all
+                    paragraphs need topic sentences. In particular, opening and closing
+                    paragraphs, which serve different functions from body paragraphs,
+                    generally don’t have topic sentences.
+                </p>
+                <ul class="highlighted-terms"></ul>
+            </section>
+        </div>
+    </div>
+</div>
+ <!--join pointechs-->
+ <div class="join-section">
+  <div>
+    <p data-trans="join_p2">join_p2</p>
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#signupModal">
+      <span data-trans="Get Started Now">Get Started Now</span>
+      <img src="/assets/images/next.webp" alt="next_icon"
+        style="vertical-align: baseline; width: 5px; margin: 0 0 0 3px" />
+    </button>
+  </div>
+</div>
+<!--end of join pointechs-->
+<!--contact us-->
+<div class="pointechs-contactus" id="contact-us">
+  <main>
+    <section>
+      <div class="contact-us-header">
+        <section>
+          <span></span>
+          <h1 data-trans="Contact Us">Contact Us</h1>
+        </section>
+        <p data-trans="We Will Be Happy To Contact With You">
+          We Will Be Happy To Contact With You
+        </p>
+      </div>
+      <form class="contactus-form">
+        <div>
+          <input type="text" name="fullname" id="Full Name" data-name="contact-us" />
+          <label for="Full Name" data-trans="Full Name">Full Name</label>
+          <small class="text-danger errorMessage" name="fullnameError">
+          </small>
+        </div>
+        <div>
+          <input type="text" name="email" id="contactus-email" data-name="contact-us" />
+          <label for="email" data-trans="Email Address">Email Address</label>
+          <small class="text-danger errorMessage" name="emailError">
+          </small>
+        </div>
+        <div>
+          <textarea name="message" id="message" data-name="contact-us"></textarea>
+          <label for="message" data-trans="Enter your message here!">Enter your message here!</label>
+          <small class="text-danger errorMessage" name="messageError">
+          </small>
+        </div>
+        <div>
+          <button type="submit" class="btn">
+            <span data-trans="Send Message">Send Message</span>
+            <img src="/assets/images/next.svg" alt="next_icon" style="
+                  vertical-align: baseline;
+                  width: 5px;
+                  margin: 0 0 0 3px;
+                " />
+          </button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <img src="/assets/images/contact-us.webp" loading="lazy" alt="contact-us" />
+    </section>
+  </main>
+</div>
+<!--end of contactus-->
+  <!--footer-->
+  <div class="pointechs-footer">
+    <main>
+      <section>
+        <image src="/assets/images/logo.webp" loading="lazy" alt="pointechs-logo" />
+        <p data-trans="footer_p">footer_p</p>
+      </section>
+      <section>
+        <span class="footer-section-header" data-trans="Company">Company</span>
+        <div class="footer-link-pages-section-2">
+          <div>
+            <ul class="footer-list-of-links">
+              <li>
+                <a href="#home" data-trans="Home">Home</a>
+              </li>
+              <li>
+                <a href="#about-us" data-trans="About us">About us</a>
+              </li>
+              <li>
+                <a href="#our-features" data-trans="Our features">Our features</a>
+              </li>
+              <li>
+                <a href="#why-us" data-trans="Why us?">Why us?</a>
+              </li>
+              <li>
+                <a href="#how-it-works" data-trans="How it works">How it works</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="footer-list-of-links">
+              <li>
+                <a href="#contact-us" data-trans="Contact us">Contact us</a>
+              </li>
+              <li>
+                <a href="/html/FAQs.html" data-trans="FAQs">FAQs</a>
+              </li>
+              <li>
+                <a href="/html/terms-and-conditions.html" data-trans="Terms and Conditions">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#" data-trans="Privacy Policy">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <span class="footer-section-header" data-trans="Contact">Contact</span>
+        <ul class="footer-list-of-links">
+          <li>
+            <img src="/assets/images/mail.svg" loading="lazy" alt="mail" />
+            <a href="mailto:info@pointechs.com">info@pointechs.com</a>
+          </li>
+          <li>
+            <img src="/assets/images/pin.svg" loading="lazy" alt="pin" />
+            <a href="https://www.google.com/maps/place/651+N+Broad+St+%23+201,+Middletown,+DE+19709,+USA/@39.4558755,-75.7174523,17z/data=!3m1!4b1!4m6!3m5!1s0x89c7a079b74b8557:0x6ce80b96a55fea8b!8m2!3d39.4558755!4d-75.7174523!16s%2Fg%2F11nyp4zzfq"
+              target="_black" id="footer-location-link">
+              651 North Broad Street, Suite 201, Middletown, DE 19709, USA
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <footer class="pointechs-footer-extra-details">
+    <div>
+      <span data-trans="Pointechs. All rights reserved">Pointechs. All rights reserved</span>
+      <span data-trans="Powered by Kaizen Gate">Powered by Kaizen Gate</span>
+    </div>
+
+    </div>
+  </footer>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquey.min.js"></script>
+    <script src="/js/select2.min.js"></script>
+    <script src="/js/terms-and-conditions.js" type="module"></script>
+</body>
+
+</html>

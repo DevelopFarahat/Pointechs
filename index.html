@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-trans="Pointechs">Pointechs</title>
+  <meta name="description" data-trans="metaDescription" content=metaDescription />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico" />
+  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Mohamed Farahat " />
+  <meta name="audience" content="all" />
+   <!-- Search Engine --> 
+  <meta name="description" data-trans="metaDescription" content=metaDescription />
+  <meta property="og:url" content="https://pointechs.com" />
+  <meta name="image" content="/assets/images/android-chrome-512x512.png" />
+  <!-- Schema.org for Google --> 
+  <meta itemprop="description" data-trans="metaDescription" content="metaDescription"/>
+
+  <meta itemprop="image" content="https://pointechs.com/assets/images/android-chrome-512x512.png" />
+  <meta property="og:url" content="https://pointechs.com" />
+   <!-- Open Graph general (Facebook, Pinterest & Google+) --> 
+  <meta property="og:title"data-trans="metaTitle" content="metaTitle" />
+  <meta property="og:description" data-trans="metaDescription" content="metaDescription"/>
+  <meta property="og:image" content="/assets/images/android-chrome-512x512.png" />
+  <meta property="og:image:type" content="image/png" /> 
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pointechs | بوينتكس " />
+  <meta property="og:url" content="https://pointechs.com" />
+  <!----Twitter--> 
+  <meta name="twitter:card" content="photo" />
+  <meta name="twitter:title" data-trans="metaTitle" content="metaTitle" />
+  <meta name="twitter:description" data-trans="metaDescription" content="metaDescription"/>
+  <meta name="twitter:image:src" content="https://www.pointechs.com/assets/images/android-chrome-512x512.png"/>
+  <meta name="twitter:url" content="https://pointechs.com" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/select2.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-xl pointechs-navbar">
+    <div class="container-fluid navbar-container">
+      <a class="navbar-brand" href="#"><img class="logo" src="./assets/images/logo.webp" alt="pointechs_logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <div class="navbar-nav nav" id="navLinksCont"></div>
+        <div class="btn-container">
+          <button type="button" class="btn btn-lang">
+            <span>العربية</span>
+          </button>
+          <button type="button" id="login-btn" class="btn btn-login" data-trans="Log In" data-bs-toggle="modal"
+            data-bs-target="#signinModal">
+            Log In
+          </button>
+          <button type="button" id="signup-btn" class="btn btn-get-started" data-trans="Get Started"
+            data-bs-toggle="modal" data-bs-target="#signupModal">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--end of navbar-->
+  <!--signup modal-->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="direction: initial;">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body signup-model-body" style="direction: ltr;">
+          <!-- signup code -->
+          <section class="signup-img-container">
+            <img src="assets/images/person.webp" loading="lazy" alt="person with laptop setting on desk" />
+          </section>
+          <section class="signup-form-container">
+            <div>
+              <span data-bs-dismiss="modal" id="sign-up-close">
+                <img src="/assets/images/close.svg" alt="close" />
+              </span>
+            </div>
+            <form class="signup-form" method="post">
+              <h1 data-trans="Sign up">Sign up</h1>
+              <section class="signup-settings-header">
+                <span id="personalInfo" data-trans="Personal Info">Personal Info</span>
+                <span id="accountDetails" data-trans="Account Details">Account Details</span>
+              </section>
+              <div class="personal-info">
+                <div>
+                  <label for="fullname" data-trans="Full Name">Full Name</label>
+                  <input type="text" name="fullname" id="fullname" />
+                  <small class="text-danger" name="fullname"></small>
+                </div>
+                <div>
+                  <label for="email" data-trans="Email Address">Email Address</label>
+                  <input type="text" name="email" id="email" />
+                  <small class="text-danger" name="email"></small>
+                </div>
+                <div id="phone-dialcode-cont">
+                  <label for="phone" class="phone" data-trans="Phone Number">Phone Number</label>
+                  <section class="phone-input-select-section" style="border-radius: 5px;">
+                    <select class="basic-select-phone-code" name="dialCode" id="dialCode">
+                    </select>
+                    <input type="number" name="phone" id="phone" />
+                  </section>
+                  <small class="text-danger" name="phone"></small>
+                </div>
+                <div class="pass-section">
+                  <label for="password" data-trans="Password">Password</label>
+                  <div tabindex="0" id="pass-section-input-eye-cont">
+                    <input type="password" name="password" id="password" />
+                    <div id="pass">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye-slash" viewBox="0 0 16 16">
+                        <path
+                          d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                        <path
+                          d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                        <path
+                          d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <small class="text-danger" name="password"></small>
+                </div>
+                <div class="pass-section">
+                  <label for="confirmPassword" data-trans="Confirm Password">Confirm Password</label>
+                  <div tabindex="0" id="con-pass-section-input-eye-cont">
+                    <input type="password" name="confirmPassword" id="confirmPassword" />
+                    <div id="con-pass">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye-slash" viewBox="0 0 16 16">
+                        <path
+                          d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                        <path
+                          d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                        <path
+                          d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <small class="text-danger" name="confirmPassword"></small>
+                </div>
+              </div>
+              <div class="account-details">
+                <div>
+                  <label for="country-select" data-trans="Choose Country">Choose Country</label>
+                  <select class="basic-select-countries-names"></select>
+                </div>
+                <div>
+                  <label for="category-select" data-trans="Choose Category">Choose Category</label>
+                  <select class="basic-categories-select-names"></select>
+                </div>
+                <div>
+                  <label for="store-name-ar" data-trans="Store Name in Arabic">Store Name in Arabic</label>
+                  <input type="text" name="storeNameAr" id="store-name-ar" />
+                  <small class="text-danger" name="storeNameAr"></small>
+                </div>
+                <div>
+                  <label id="store-name-en" data-trans="Your store name">Your store name</label>
+                  <input type="text" name="storeNameEn" id="store-name-en" />
+                  <small class="text-danger" name="storeNameEn"></small>
+                </div>
+                <div>
+                  <input class="form-check-input mt-0" type="checkbox" name="termsOfServiceStatus"
+                    id="termsOfServiceStatus" value="" aria-label="Checkbox for following text input">
+                  <label for="termsOfServiceStatus">
+                    <span data-trans="By confirming your data, you agree to">By confirming your data, you agreeto</span>
+                    <a href="/html/terms-and-conditions.html" data-trans="our terms of service">our terms of service</a>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn continue-btn" data-trans="Continue">Continue</button>
+              <span>
+                <span data-trans="Already have an account">Already have an account</span>
+                <a href="#" data-trans="Sign In" data-bs-toggle="modal" id="signinLink" data-bs-target="#signinModal">Sign In</a>
+              </span>
+            </form>
+          </section>
+          <!--end of sign up form-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of sign up modal-->
+  <!--sign in modal-->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="direction: initial;">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body  login-body-modal">
+          <!-- sign in form-->
+          <section class=login-img-section>
+            <img src="assets/images/login.webp" loading="lazy" alt="hands types on laptop" />
+          </section>
+          <section class=login-form-container>
+            <div>
+              <span id="login-close" data-bs-dismiss="modal">
+                <img src="/assets/images/close.svg" alt="close_icon" />
+              </span>
+            </div>
+            <div>
+              <h1 data-trans="Log in">Log in</h1>
+              <form class=login-form method="post">
+                <div>
+                  <label for="email" data-trans="Email Address">Email Address</label>
+                  <input type="text" name="email" id="email-login" />
+                  <small class="text-danger errorMessage" name="email" data-trans=""></small>
+                </div>
+                <div>
+                  <label for="password" data-trans="Password">Password</label>
+                  <div>
+                    <div id="pass-login-section-cont">
+                      <input type="password" name="password" id="password-login" />
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-eye-slash" viewBox="0 0 16 16">
+                          <path
+                            d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                          <path
+                            d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                          <path
+                            d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <small class="text-danger errorMessage" id="login-password-error-message" name="password" data-trans=""></small>
+                  </div>
+                  <a class=forget-password-link href="#" data-trans="Forget Password">Forget Password</a>
+                </div>
+                <div class=separator></div>
+                <button type="submit" id="login-form-login-btn" class="btn" data-trans="Login">Login</button>
+                <span class=register-now-link>
+                  <span data-trans="Create an account">Create an account</span>
+                  <a data-trans="Register Now" href="#" data-bs-toggle="modal" id="signupLink" data-bs-target="#signupModal">Register Now</a>
+                </span>
+              </form>
+            </div>
+          </section>
+          <!--end of sign in form-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--pointechs_app-->
+  <div class="app">
+    <!--wating backdrop-->
+    <div class='backdrop-waiting'>
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <!--pointechs home-->
+    <div class="pointchs-home" id="home">
+      <div>
+        <div>
+          <p>
+            GROW YOUR BUSINESS
+            <br />
+            WITH <span>POINTECHS</span>
+          </p>
+          <p>
+            The Easiest Way to Reward
+            <br />
+            Your Customers
+          </p>
+
+          <div class="get-started-btn-container">
+            <button type="button" class="btn btn-get-started-now" data-bs-toggle="modal" data-bs-target="#signupModal">
+              <span data-trans="Get Started Now"> Get Started Now</span>
+              <img src="/assets/images/next.webp" alt="next_icon" style="
+                    vertical-align: baseline;
+                    width: 5px;
+                    margin: 0 0 0 3px;
+                  " />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end of Pointechs_home-->
+    <!--pointechs_about-->
+    <div class="pointechs-welcome" id="about-us">
+      <div>
+        <div class="pointechs-video-poster">
+          <img src="/assets/images/video-poster.webp" alt="video-poster" class="video-poster" />
+          <img src="/assets/images/play.svg" alt="play" data-bs-toggle="modal"
+            data-bs-target="#pointechsYoutubeModal" />
+          <!--pointechs youtube modal-->
+          <div class="modal fade" id="pointechsYoutubeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <!-- youtube iframe-->
+                  <section class="popup-video-modal-section">
+                    <div class="iframe-video-c-header">
+                      <span data-bs-dismiss="modal">
+                        <img src="/assets/images/close.svg" alt="close_icon" />
+                      </span>
+                    </div>
+                    <div class="embedded-youtube-iframe-c">
+                      <iframe width="100%" height="447" src="https://www.youtube.com/embed/khEAmUlvNJs"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen"></iframe>
+                    </div>
+                  </section>
+                  <!--end of youtube iframe-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of pointechs youtube modal-->
+        </div>
+        <div class="welcom-pointechs">
+          <section>
+            <span></span>
+            <h1 data-trans="Welcome to Pointechs">Welcome to Pointechs</h1>
+          </section>
+          <section>
+            <p>
+              The ultimate loyalty program solution for businesses of all
+              sizes. Our innovative platform is designed to help you build
+              long-lasting relationships with your customers, increase sales,
+              and drive sustainable growth.
+            </p>
+            <p>
+              Our platform is designed to build a relationship between
+              merchants and their customers by providing a portal that allows
+              merchants to track their loyalty program, as well as a mobile
+              app for customers to view their points and redeem them in
+              real-time.
+            </p>
+            <p>
+              The portal features a loyalty dashboard that merchants can use
+              to track customer engagement, redemption rates, and overall
+              business growth.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!--end of about section-->
+    <!--feature section-->
+    <div class="features" id="our-features">
+      <div>
+        <section>
+          <span></span>
+          <h1 data-trans="Features of Pointechs">Features of Pointechs</h1>
+        </section>
+        <section id="pointechs-features"></section>
+      </div>
+    </div>
+    <!-- read more modal-->
+    <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" style="direction: initial;">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body feature-readmore-modal">
+            <!--Read More-->
+            <section
+            class="feature-modal-header" style="direction: ltr;">
+            <span data-bs-dismiss="modal">
+             <img src="/assets/images/close.svg" alt="close_icon"/>
+            </span>
+          </section>
+          <section>
+            <div>
+              <div class="feature-icon-container">
+                <img src="assets/images/feature.svg" alt="feature"/>
+              </div>
+              <h2 id="feature-read-more-title"></h2>
+            </div>
+            <ul id="features-list-of-features"></ul>
+          </section>
+            <!--End of Read More-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of read more modal-->
+    <!--end od pointechs features-->
+    <!--pointechs why-->
+    <div class="why-pointechs" id="why-us">
+      <main>
+        <section>
+          <div>
+            <main>
+              <span></span>
+              <h1 data-trans="Why Pointechs?">Why Pointechs?</h1>
+            </main>
+            <p data-trans="why_p1">why_p1</p>
+            <p data-trans="why_p2">why_p2</p>
+            <p data-trans="why_p3">why_p3</p>
+          </div>
+          <div>
+            <image src="assets/images/why-pointechs.webp" loading="lazy" alt="why-pointechs-img" />
+          </div>
+        </section>
+      </main>
+      <section>
+        <main>
+          <p data-trans="join_p1">join_p1</p>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#signupModal">
+            <span>Get Started Now</span>
+            <img src="/assets/images/next.svg" alt="next_icon"
+              style="vertical-align: baseline; width: 5px; margin: 0 0 0 3px" />
+          </button>
+        </main>
+      </section>
+    </div>
+    <!-- end of why pointechs-->
+    <!--pointechs how it works-->
+    <div class="how-pointechs-works" id="how-it-works">
+      <main>
+        <div style="order: 2">
+          <image src="assets/images/how-pointechs-works.webp" loading="lazy" alt="how-pointechs-works" />
+        </div>
+        <div>
+          <section>
+            <span></span>
+            <h1 data-trans="How it Works ..">How it Works ..</h1>
+          </section>
+          <section id="how-pointechs-works-steps-section"></section>
+        </div>
+      </main>
+    </div>
+    <!--end of how it works-->
+    <!--pointechs app-->
+    <div class="pointechs-app">
+      <main>
+        <section>
+          <div>
+            <section>
+              <span></span>
+              <h1 data-trans="Pointechs App">Pointechs App</h1>
+            </section>
+            <section>
+              <p data-trans="pointechs-app-p">pointechs-app-p</p>
+            </section>
+          </div>
+          <div>
+            <img src="assets/images/pointechs-app.webp" loading="lazy" alt="pointechs-app" />
+          </div>
+        </section>
+        <div>
+          <span data-trans="Download Our App">Download Our App</span>
+          <section>
+            <a rol="button" href="https://apps.apple.com/us/app/id1504083441" target="_blank" class="btn link-btn">
+              <image src="assets/images/App-store.webp" alt="app-store" loading="lazy" />
+            </a>
+            <a role="button" href="https://play.google.com/store/apps/details?id=com.accuragroup.pointechs"
+              target="_blank" class="btn link-btn">
+              <image src="assets/images/google-play.webp" alt="google-play" loading="lazy" />
+            </a>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!--end of pointechs app-->
+  </div>
+  <!--join pointechs-->
+  <div class="join-section">
+    <div>
+      <p data-trans="join_p2">join_p2</p>
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#signupModal">
+        <span data-trans="Get Started Now">Get Started Now</span>
+        <img src="/assets/images/next.webp" alt="next_icon"
+          style="vertical-align: baseline; width: 5px; margin: 0 0 0 3px" />
+      </button>
+    </div>
+  </div>
+  <!--end of join pointechs-->
+  <!--contact us-->
+  <div class="pointechs-contactus" id="contact-us">
+    <main>
+      <section>
+        <div class="contact-us-header">
+          <section>
+            <span></span>
+            <h1 data-trans="Contact Us">Contact Us</h1>
+          </section>
+          <p data-trans="We Will Be Happy To Contact With You">
+            We Will Be Happy To Contact With You
+          </p>
+        </div>
+        <form class="contactus-form">
+          <div>
+            <input type="text" name="fullname" id="Full Name" data-name="contact-us" />
+            <label for="Full Name" data-trans="Full Name">Full Name</label>
+            <small class="text-danger errorMessage" name="fullnameError">
+            </small>
+          </div>
+          <div>
+            <input type="text" name="email" id="contactus-email" data-name="contact-us" />
+            <label for="email" data-trans="Email Address">Email Address</label>
+            <small class="text-danger errorMessage" name="emailError">
+            </small>
+          </div>
+          <div>
+            <textarea name="message" id="message" data-name="contact-us"></textarea>
+            <label for="message" data-trans="Enter your message here!">Enter your message here!</label>
+            <small class="text-danger errorMessage" name="messageError">
+            </small>
+          </div>
+          <div>
+            <button type="submit" class="btn">
+              <span data-trans="Send Message">Send Message</span>
+              <img src="/assets/images/next.svg" alt="next_icon" style="
+                    vertical-align: baseline;
+                    width: 5px;
+                    margin: 0 0 0 3px;
+                  " />
+            </button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <img src="assets/images/contact-us.webp" loading="lazy" alt="contact-us" />
+      </section>
+    </main>
+  </div>
+  <!--end of contactus-->
+  <!--footer-->
+  <div class="pointechs-footer">
+    <main>
+      <section>
+        <image src="assets/images/logo.webp" loading="lazy" alt="pointechs-logo" />
+        <p data-trans="footer_p">footer_p</p>
+      </section>
+      <section>
+        <span class="footer-section-header" data-trans="Company">Company</span>
+        <div class="footer-link-pages-section-2">
+          <div>
+            <ul class="footer-list-of-links">
+              <li>
+                <a href="#home" data-trans="Home">Home</a>
+              </li>
+              <li>
+                <a href="#about-us" data-trans="About us">About us</a>
+              </li>
+              <li>
+                <a href="#our-features" data-trans="Our features">Our features</a>
+              </li>
+              <li>
+                <a href="#why-us" data-trans="Why us?">Why us?</a>
+              </li>
+              <li>
+                <a href="#how-it-works" data-trans="How it works">How it works</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="footer-list-of-links">
+              <li>
+                <a href="#contact-us" data-trans="Contact us">Contact us</a>
+              </li>
+              <li>
+                <a href="/html/FAQs.html" data-trans="FAQs">FAQs</a>
+              </li>
+              <li>
+                <a href="/html/terms-and-conditions.html" data-trans="Terms and Conditions">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#" data-trans="Privacy Policy">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <span class="footer-section-header" data-trans="Contact">Contact</span>
+        <ul class="footer-list-of-links">
+          <li>
+            <img src="assets/images/mail.svg" loading="lazy" alt="mail" />
+            <a href="mailto:info@pointechs.com">info@pointechs.com</a>
+          </li>
+          <li>
+            <img src="assets/images/pin.svg" loading="lazy" alt="pin" />
+            <a href="https://www.google.com/maps/place/651+N+Broad+St+%23+201,+Middletown,+DE+19709,+USA/@39.4558755,-75.7174523,17z/data=!3m1!4b1!4m6!3m5!1s0x89c7a079b74b8557:0x6ce80b96a55fea8b!8m2!3d39.4558755!4d-75.7174523!16s%2Fg%2F11nyp4zzfq"
+              target="_black" id="footer-location-link">
+              651 North Broad Street, Suite 201, Middletown, DE 19709, USA
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <footer class="pointechs-footer-extra-details">
+    <div>
+      <span data-trans="Pointechs. All rights reserved">Pointechs. All rights reserved</span>
+      <span data-trans="Powered by Kaizen Gate">Powered by Kaizen Gate</span>
+    </div>
+
+    </div>
+  </footer>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquey.min.js"></script>
+  <script src="/js/select2.min.js"></script>
+  <script src="./js/main.js" type="module"></script>
+
+</body>
+
+</html>
