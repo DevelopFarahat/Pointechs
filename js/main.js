@@ -1368,11 +1368,11 @@ const changeSignupStyles = (lang)=>{
   lang == 'en'?termsAndServicesLabel.style.textAlign = 'left':termsAndServicesLabel.style.textAlign = 'right';
   let dialCodeSelect = document.querySelector(".select2-selection--single");
   if(lang == "en"){
-  //  dialCodeSelect.classList.add("country-dialCode-select-combobox", "dialcode-country", "dialcode");
+    dialCodeSelect.classList.add("country-dialCode-select-combobox", "dialcode-country", "dialcode");
     dialCodeSelect.classList.remove("country-dialCode-select-combobox-ar", "dialcode-country-ar", "dialcode-ar");
   }else{
     dialCodeSelect.classList.add("country-dialCode-select-combobox-ar", "dialcode-country-ar", "dialcode-ar");
-    //dialCodeSelect.classList.remove("country-dialCode-select-combobox", "dialcode-country", "dialcode");
+    dialCodeSelect.classList.remove("country-dialCode-select-combobox", "dialcode-country", "dialcode");
   }
   let phoneInput = document.getElementById("phone");
   lang == "en"?(phoneInput.style.cssText = `border-top-left-radius:0;border-bottom-left-radius:0`):(phoneInput.style.cssText = `border-top-right-radius:0;border-bottom-right-radius:0`);
