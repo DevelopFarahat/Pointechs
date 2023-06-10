@@ -1655,12 +1655,10 @@ input[type=number] {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  list-style-position: inside;
 
 }
 .ol-ar{
   list-style-type: arabic-indic;
-  list-style-position: outside;
 }
 ol li::marker {
   color: #27323C;
@@ -1688,7 +1686,6 @@ ol li::marker {
   font-weight: normal;
   color: #5E5E5E;
   text-transform: lowercase;
-  text-align: justify;
 }
 @media screen and (max-width:1199px) {
   .highlighted-terms > li > h3{
