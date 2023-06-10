@@ -321,6 +321,7 @@
 }
 .accordion-button-ar{
   direction: rtl;
+  text-align: right;
 }
 .accordion-button-ar::after{
   margin-left: 0;
