@@ -58,9 +58,9 @@ const createFrequentlyAskedQuestions = () => {
     (faq) =>
       (faqsContainer.innerHTML += `
         <div class="accordion FAQ-accordion" id="accordionExample" style=padding:5px;>
-        <div class="accordion-item" event-key="0">
+        <div class="accordion-item">
         <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${faq.id}" aria-expanded="true" aria-controls="#collapse-${faq.id}" data-trans="${faq.q}">
+        <button class="accordion-button ${faq.id == 0?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${faq.id}" aria-expanded="${faq.id == 0?true:false}" aria-controls="#collapse-${faq.id}" data-trans="${faq.q}">
         ${faq.q}
         </button>
         </h2>
