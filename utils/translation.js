@@ -81,13 +81,16 @@ export const setLanguage = async (lang) => {
     console.log(error);
   }
   // chnage the direction of all buttons depends on the lang
-  let buttons = document.querySelectorAll("button");
+  let buttons = document.querySelectorAll("button:not(.accordion-button)");
   buttons.forEach((btn) => {
-    lang == "ar"
-      ? (btn.style.direction = "ltr")
-      : (btn.style.direction = "ltr");
+    btn.style.direction = "ltr"
   });
-  handleNavbarCloseOnToogle();
+  try{
+    handleNavbarCloseOnToogle();
+  }catch(error){
+
+  }
+  
 };
 
 export default translationsPromise;

@@ -1309,7 +1309,7 @@ input[type=number] {
   }
 }
 
-.personal-info > div > input, .account-details > div > input {
+.personal-info > div > input:not(input[type='checkbox']), .account-details > div > input:not(input[type='checkbox']) {
   width: 100%;
   background: #FCFCFC;
   border: 1px solid rgba(94, 94, 94, 0.1019607843);
@@ -1321,7 +1321,7 @@ input[type=number] {
   outline: none;
   padding: 7px;
 }
-.personal-info > div > input:focus, .account-details > div > input:focus {
+.personal-info > div > input:not(input[type='checkbox']):focus, .account-details > div > input:not(input[type='checkbox']):focus {
   outline: 1px solid #FEB247;
 }
 
@@ -1636,7 +1636,6 @@ input[type=number] {
 }
 
 .terms-main-section + div > div > section:nth-child(2) > p {
-  text-align: left;
   font-family: Poppins;
   line-height: 1.5;
   font-size: 1.2rem;
@@ -1656,15 +1655,46 @@ input[type=number] {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+
+}
+.ol-ar{
+  list-style-type: arabic-indic;
+}
+ol li::marker {
+  color: #27323C;
+  font-size: 20px;
 }
 
-.highlighted-terms > li {
-  text-align: left;
+.highlighted-terms > li > h3  {
   font-family: Poppins;
   line-height: 1.5;
-  font-size: 1rem;
+  color: #27323C;
+  font-weight: 400;
+}
+.highlighted-terms > li > ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  list-style-type: disc;
+}
+.highlighted-terms > li > ul > li{
+  font-family: Poppins;
+  line-height: 1.5;
+  font-size: 20px;
   font-weight: normal;
   color: #5E5E5E;
+  text-transform: lowercase;
+  text-align: justify;
+}
+@media screen and (max-width:1199px) {
+  .highlighted-terms > li > h3{
+    font-size: 1rem;
+  }
+  .highlighted-terms > li > ul > li{
+    font-size: 1rem;
+  }
 }
 /* new added */
 .errorMessage {

@@ -2,64 +2,54 @@ import { createNavbarLinks } from "./main.js";
 const FAQsArr = [
   {
     id: 0,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "What is POINTECHS?",
+    a: "FAQs1",
   },
   {
     id: 1,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "How does POINTECHS work?",
+    a: "FAQs2",
   },
   {
     id: 2,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "How can I register for POINTECHS?",
+    a: "FAQs3",
   },
   {
     id: 3,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "Can I customize my loyalty program with POINTECHS?",
+    a: "FAQs4",
   },
   {
     id: 4,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "How do I manage my loyalty program with POINTECHS?",
+    a: "FAQs5",
   },
   {
     id: 5,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "How much does POINTECHS cost?",
+    a: "FAQs6",
   },
   {
     id: 6,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "Is POINTECHS suitable for all types of businesses?",
+    a: "FAQs7",
   },
   {
     id: 7,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "What kind of support is available for POINTECHS users?",
+    a: "FAQs8",
   },
   {
     id: 8,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
+    q: "Is my data secure with POINTECHS?",
+    a: "FAQs9",
   },
   {
     id: 9,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
-  },
-  {
-    id: 10,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
-  },
-  {
-    id: 11,
-    q: "How does it work?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum. Quis blandit turpis cursus in hac habitasse. Libero volutpat sed cras ornare arcu dui vivamus. Porttitor lacus luctus accumsan tortor posuere. Sit amet justo donec enim. Enim facilisis gravida neque convallis. Fames ac turpis egestas sed tempus urna et. Consequat semper viverra nam libero justo laoreet sit amet. Quis varius quam quisque id diam vel. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.",
-  },
+    q: "How can I get started with POINTECHS?",
+    a: "FAQs10",
+  }
 ];
 let faqsContainer = document.querySelector("#faqs-container");
 
@@ -67,19 +57,15 @@ const createFrequentlyAskedQuestions = () => {
   FAQsArr.map(
     (faq) =>
       (faqsContainer.innerHTML += `
-        <div class="accordion FAQ-accordion" id="accordionExample">
-  <div class="accordion-item" event-key="0">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${
-        faq.id
-      }" aria-expanded="true" aria-controls="#collapse-${faq.id}">
+        <div class="accordion FAQ-accordion" id="accordionExample" style=padding:5px;>
+        <div class="accordion-item" event-key="0">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${faq.id}" aria-expanded="true" aria-controls="#collapse-${faq.id}" data-trans="${faq.q}">
         ${faq.q}
-      </button>
-    </h2>
-    <div id="collapse-${faq.id}" class="accordion-collapse collapse ${
-        faq.id == 0 ? "show" : ""
-      }" data-bs-parent="#collapse-${faq.id}">
-      <div class="accordion-body">
+        </button>
+        </h2>
+        <div id="collapse-${faq.id}" class="accordion-collapse collapse ${faq.id == 0 ? "show" : ""}" data-bs-parent="#collapse-${faq.id}">
+        <div class="accordion-body" data-trans="${faq.a}">
         ${faq.a}
       </div>
     </div>
@@ -88,4 +74,16 @@ const createFrequentlyAskedQuestions = () => {
       `)
   );
 };
-createFrequentlyAskedQuestions();
+try{
+  createFrequentlyAskedQuestions();
+}catch(error){
+  console.log(error);
+}
+
+
+export const changeFAQsStyles = (lang)=>{
+    let accordionBtns = document.querySelectorAll(".accordion-button");
+    accordionBtns.forEach((accBtn)=>{
+      lang == 'ar'?accBtn.classList.add("accordion-button-ar"):accBtn.classList.remove("accordion-button-ar");
+    })
+}

@@ -1,5 +1,7 @@
 import translationsPromise from "../utils/translation.js";
 import {setLanguage} from "../utils/translation.js";
+import {changeFAQsStyles} from "./FAQs.js";
+import {changeTermsAndConditionsStyles} from "./terms-and-conditions.js";
 const linksArr = [
   { id: 0, href: "#home", data: "Home" },
   { id: 1, href: "#about-us", data: "About us" },
@@ -187,6 +189,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   }
   
  let categoryArr = [];
+
   getCountriesDialCode().then((data)=>{
     lang == 'en'?categoryArr = [{ id: 0, categoryName: "Restaurants" },{id:1,categoryName:"Cafes"}]:categoryArr = [{ id: 0, categoryName: "مطاعم" },{id:1,categoryName:"كافيهات"}];
     createPhoneSelectOptions(data);
@@ -450,7 +453,6 @@ contactusInputs.forEach((input) => {
 
 const handleContactusSubmit = (event) => {
   event.preventDefault();
-
   for (let key in contactusData) {
     if (contactusData[key] == "") return;
   }
@@ -1037,12 +1039,16 @@ const resetAllTheSignupFormCharacteristics= ()=>{
     signupSubmitBtn.innerHTML = 'Continue';
     signupSubmitBtn.setAttribute("data-trans","Continue");
   }else{
-    signupSubmitBtn.innerHTML = 'استمر';
-    signupSubmitBtn.setAttribute("data-trans","استمر");
+    signupSubmitBtn.innerHTML = 'Continue';
+    signupSubmitBtn.setAttribute("data-trans","Continue");
   }
 }
 signupCloseBtn.addEventListener('click',resetAllTheSignupFormCharacteristics);
-let signupNavbarBtn = document.getElementById("signup-btn");
+//let signupNavbarBtn = document.getElementById("signup-btn");
+let signupBtns = document.querySelectorAll("button[data-bs-target='#signupModal']");
+signupBtns.forEach((signup_btn)=>{
+  signup_btn.addEventListener('click',()=>createUrlFor_Signup_login_Popup("signupModal"));
+})
 const createUrlFor_Signup_login_Popup = (popupFormName)=>{
   getBackToTheRootOfThePage("onOpen");
   let newUrl = new URL(window.location.href);
@@ -1050,8 +1056,20 @@ const createUrlFor_Signup_login_Popup = (popupFormName)=>{
   history.pushState(null, "", newUrl.href);
   let title = popupFormName == 'signupModal'?'Sign Up title':'Sign In';
   changeAppTitleOnUserSelectNavbarLink(undefined,title);
+  detectLangForSignupSelectData();
 }
-signupNavbarBtn.addEventListener('click',()=>createUrlFor_Signup_login_Popup("signupModal"));
+/* new added*/
+const detectLangForSignupSelectData = async ()=>{
+  let lang = new URL(window.location.href).searchParams.get('lang');
+  let categoryArr = [];
+  getCountriesDialCode().then((data)=>{
+    lang == 'en'?categoryArr = [{ id: 0, categoryName: "Restaurants" },{id:1,categoryName:"Cafes"}]:categoryArr = [{ id: 0, categoryName: "مطاعم" },{id:1,categoryName:"كافيهات"}];
+    createPhoneSelectOptions(data);
+    createCountryAndCategorySelectOptions(data,"name",".basic-select-countries-names");
+    createCountryAndCategorySelectOptions(categoryArr,"categoryName",".basic-categories-select-names");
+   })
+}
+//signupNavbarBtn.addEventListener('click',()=>createUrlFor_Signup_login_Popup("signupModal"));
 //login in form
 let loginUserData = {
   email: "",
@@ -1216,6 +1234,7 @@ const getBackToTheOriginalTitle = (useCase)=>{
 }
 /* customization style for arabic version */
   let lang;
+
   export const changeApplicationStylesOnUserRequestOrChnageLang = ()=>{
     lang = new URL(window.location.href).searchParams.get('lang');
     try{
@@ -1229,12 +1248,22 @@ const getBackToTheOriginalTitle = (useCase)=>{
     }catch(error){
     console.log(error);
     }
-   
+    try{
+      changeFAQsStyles(lang);
+    }catch(error){
+      console.log(error);
+    }
+    try{
+      changeTermsAndConditionsStyles(lang);
+    }catch(error){
+      console.log(error);
+    }
     changeContactusComponentStyles(lang);
     changeFooterStyles(lang);
     changeSignupStyles(lang);
     changeLoginStyles(lang);
   }
+  
   const changeHomeComponentStyles = (lang)=>{
   let homeComponent = document.getElementById("home");
   lang == 'ar'?homeComponent.classList.add("pointechs-home-ar"):homeComponent.classList.remove("pointechs-home-ar");
@@ -1335,11 +1364,11 @@ const changeSignupStyles = (lang)=>{
   lang == 'en'?termsAndServicesLabel.style.textAlign = 'left':termsAndServicesLabel.style.textAlign = 'right';
   let dialCodeSelect = document.querySelector(".select2-selection--single");
   if(lang == "en"){
-    dialCodeSelect.classList.add("country-dialCode-select-combobox", "dialcode-country", "dialcode");
+  //  dialCodeSelect.classList.add("country-dialCode-select-combobox", "dialcode-country", "dialcode");
     dialCodeSelect.classList.remove("country-dialCode-select-combobox-ar", "dialcode-country-ar", "dialcode-ar");
   }else{
     dialCodeSelect.classList.add("country-dialCode-select-combobox-ar", "dialcode-country-ar", "dialcode-ar");
-    dialCodeSelect.classList.remove("country-dialCode-select-combobox", "dialcode-country", "dialcode");
+    //dialCodeSelect.classList.remove("country-dialCode-select-combobox", "dialcode-country", "dialcode");
   }
   let phoneInput = document.getElementById("phone");
   lang == "en"?(phoneInput.style.cssText = `border-top-left-radius:0;border-bottom-left-radius:0`):(phoneInput.style.cssText = `border-top-right-radius:0;border-bottom-right-radius:0`);
@@ -1366,6 +1395,7 @@ const changeFeaturePopupStyles = (lang)=>{
    lang == 'en'? readMoreP.style.textAlign = 'left':readMoreP.style.textAlign = 'right';
   })
 }
+
 
 
 
