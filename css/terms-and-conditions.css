@@ -1655,10 +1655,12 @@ input[type=number] {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+  list-style-position: inside;
 
 }
 .ol-ar{
   list-style-type: arabic-indic;
+  list-style-position: outside;
 }
 ol li::marker {
   color: #27323C;
@@ -1834,6 +1836,17 @@ ol li::marker {
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow{
   height: 36px !important;
+}
+.terms-and-conditions-contact{
+  justify-content: center !important;
+  align-items: baseline !important;
+  text-align: center;
+}
+@media screen and (max-width:1119px) {
+  .terms-and-conditions-contact{
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 }
 @media screen and (max-width: 1199px) {
   .highlighted-terms > li {

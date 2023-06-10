@@ -85,6 +85,7 @@ export const createNavbarLinks = () => {
   navbarLinks.forEach((navLink) => {
     navLink.addEventListener("click", (event) => {
       handleNavbarLinkSelected(event, navLink);
+      handleNavbarCloseOnToogle();
       navbarLinks.forEach((nLink) => {
         nLink.id == selectedLinkId
           ? nLink.classList.add("activated-link")
@@ -125,6 +126,8 @@ const onHnadleScrollToTargetSection = (sectionId) => {
 const highLightActivatedNavbarLink = (activatedNavLinkId) => {
   selectedLinkId = activatedNavLinkId;
   document.getElementById(activatedNavLinkId).classList.add("activated-link");
+  
+  
 };
 const changeAppTitleOnUserSelectNavbarLink = async(id,name)=>{
   if(translation == undefined)
@@ -1057,6 +1060,7 @@ const createUrlFor_Signup_login_Popup = (popupFormName)=>{
   let title = popupFormName == 'signupModal'?'Sign Up title':'Sign In';
   changeAppTitleOnUserSelectNavbarLink(undefined,title);
   detectLangForSignupSelectData();
+  handleNavbarCloseOnToogle();
 }
 /* new added*/
 const detectLangForSignupSelectData = async ()=>{

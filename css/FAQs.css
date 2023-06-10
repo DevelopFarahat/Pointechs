@@ -1810,6 +1810,17 @@ input[type=number] {
 .select2-container--default .select2-selection--single .select2-selection__arrow{
   height: 36px !important;
 }
+.FAQs-contact{
+  justify-content: center !important;
+  align-items: baseline !important;
+  text-align: center;
+}
+@media screen and (max-width:1119px) {
+  .FAQs-contact{
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
 @media screen and (max-width: 967px) {
   .signup-img-container {
     display: none;
