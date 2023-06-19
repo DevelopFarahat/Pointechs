@@ -73,7 +73,6 @@ const highlightTermsArr = [
   },
 ];
 let highlightTerms = document.querySelector(".highlighted-terms");
-console.log(highlightTerms);
 const createHighLightTerms = () => {
 
   

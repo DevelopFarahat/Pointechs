@@ -2,6 +2,7 @@ import translationsPromise from "../utils/translation.js";
 import {setLanguage} from "../utils/translation.js";
 import {changeFAQsStyles} from "./FAQs.js";
 import {changeTermsAndConditionsStyles} from "./terms-and-conditions.js";
+import {changePrivacyPolicyStyles} from "./privacyPolicy.js";
 const linksArr = [
   { id: 0, href: "#home", data: "Home" },
   { id: 1, href: "#about-us", data: "About us" },
@@ -1259,6 +1260,11 @@ const getBackToTheOriginalTitle = (useCase)=>{
     }
     try{
       changeTermsAndConditionsStyles(lang);
+    }catch(error){
+      console.log(error);
+    }
+    try{
+      changePrivacyPolicyStyles(lang);
     }catch(error){
       console.log(error);
     }
