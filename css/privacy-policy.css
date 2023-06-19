@@ -1703,6 +1703,12 @@ ol li::marker {
   align-items: baseline !important;
   text-align: center;
 }
+@media screen and (max-width:1119px) {
+  .pravicy-policy-contact{
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
 /* new added */
 .errorMessage {
   order: 3;
